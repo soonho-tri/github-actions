@@ -7,6 +7,8 @@ jobs:
     name: macos catalina build and test
     runs-on: macos-10.15
     steps:
+      - name: remove-bazelisk
+        run: if [[ -e /usr/local/bin/bazelisk ]]; then brew rm bazelisk; fi
       - name: setup
         run: |
             brew tap dreal-deps/ibex
