@@ -1,10 +1,11 @@
 name: CI
 
+on: [push]
+
 jobs:
   macos_catalina_build_and_test:
     name: macos catalina build and test
     runs-on: macos-10.15
     steps:
       - name: setup
-        run: |
-          brew upgrade gcc-8 gcc-9
+        run: brew upgrade gcc-8 gcc-9
