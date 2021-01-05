@@ -8,4 +8,7 @@ jobs:
     runs-on: macos-10.15
     steps:
       - name: setup
-        run: brew update && brew upgrade gcc@8 gcc@9
+        run: |
+            brew tap dreal-deps/ibex
+            brew tap dreal/dreal
+            brew install dreal --only-dependencies --build-from-source
