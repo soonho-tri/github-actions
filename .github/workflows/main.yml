@@ -8,4 +8,4 @@ jobs:
     runs-on: macos-10.15
     steps:
       - name: setup
-        run: brew upgrade gcc-8 gcc-9
+        run: brew upgrade gcc@8 gcc@9
